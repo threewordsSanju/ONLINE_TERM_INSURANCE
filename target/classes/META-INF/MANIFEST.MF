@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Built-By: st2
+Build-Jdk: 17.0.1
+Implementation-Title: termInsurance
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.online
+Implementation-URL: https://spring.io/projects/spring-boot/termInsurance
+Created-By: Maven Integration for Eclipse
+
