@@ -10,7 +10,7 @@ public interface PolicyService {
 	public List<Policy> getAllPolicies();
 	public Policy findPolicyById(Integer policyid) throws ResourceNotFoundException;
 	public boolean deletePolicyById(Integer policyid)throws ResourceNotFoundException;
-	public Policy savePolicy(Policy policy);
+	public Policy savePolicy(Policy policy) throws ResourceNotFoundException;
 	public Policy updatePolicy(Integer policyid,Policy policy)throws ResourceNotFoundException;
 
 }

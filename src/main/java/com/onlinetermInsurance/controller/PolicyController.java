@@ -54,7 +54,7 @@ public class PolicyController {
 	}
 	@PostMapping("/policy")
 	@ApiOperation(value="Create new policy ADD")
-	public Policy saveUser( @RequestBody Policy policy1 ) {
+	public Policy saveUser( @RequestBody Policy policy1 ) throws ResourceNotFoundException {
 		logger.info("Create Policy");
 		return  policyService.savePolicy(policy1);
 	}
