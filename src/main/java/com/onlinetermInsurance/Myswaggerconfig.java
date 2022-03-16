@@ -30,3 +30,5 @@ public class Myswaggerconfig {
 		return new ApiInfoBuilder().title("OnlineTermInsurance").description("Application for Online term Insurance").termsOfServiceUrl("https://www.javacodegeeks.com/").contact("Team").version("1.0").build();	
 	}
 }
+
+//http://localhost:9090/swagger-ui/.html

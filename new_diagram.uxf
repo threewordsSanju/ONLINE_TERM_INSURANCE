@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>10</y>
+      <w>1770</w>
+      <h>410</h>
+    </coordinates>
+    <panel_attributes>com.onlinetermInsurance.entity::Login
+--
+-lId: int
+-userName: String
+-email: String
+-password: String
+-userType: String
+-user: User
+--
++Login(): ctor
++Login(@NotNull(message = "username should not be null") String userName, @NotNull(message = "Email should not be null") @Pattern(regexp = "[a-z0-9]+@[a-z]+\\.[a-z]{2,3}", message = "invalid Email id") String email, String password, String userType, @NotNull User user): ctor
++getlId(): int
++setlId(int lId): void
++getUserName(): String
++setUserName(String userName): void
++getPassword(): String
++setPassword(String password): void
++getUserType(): String
++setUserType(String userType): void
++getUser(): User
++setUser(User user): void
++getEmail(): String
++setEmail(String email): void
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

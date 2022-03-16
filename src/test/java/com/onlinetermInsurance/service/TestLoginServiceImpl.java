@@ -1,6 +1,5 @@
 package com.onlinetermInsurance.service;
 import java.sql.Date;
-import java.time.LocalDate;
 
 import javax.xml.bind.ValidationException;
 
@@ -14,6 +13,7 @@ import com.onlinetermInsurance.entity.Login;
 import com.onlinetermInsurance.entity.User;
 import com.onlinetermInsurance.exception.ResourceNotFoundException;
 import com.onlinetermInsurance.repository.LoginDao;
+import com.onlinetermInsurance.repository.UserDaoImpl;
 
 @SpringBootTest
 public class TestLoginServiceImpl {
@@ -24,6 +24,9 @@ public class TestLoginServiceImpl {
     @MockBean
 	UserServiceImpl userServiceImpl;
 
+    @Autowired
+    UserDaoImpl userdao;
+    
 	@MockBean
 	LoginDao loginRepository;
 	
@@ -43,11 +46,15 @@ public class TestLoginServiceImpl {
 	//----------------------------------------------------------------------------------------->ADD USERS CREDITINALS<------------------------------------------------------------------------------------------\\	
 	@Test
 	void addUserCredentials() throws ResourceNotFoundException, ValidationException {
-		Login Login = new Login();
-		Login.setUserName("fname");
-		Login.setPassword("Password@123");
-		Login.setUserType("admin");
-	loginServiceImpl.addUserCredentials(Login);
+		User user=new User();
+		user.setFname("Sanju");
+		user.setLname("sanje");
+		userdao.save(user);
+		Login login = new Login();
+		login.setUserName("Sanju");
+		login.setPassword("Sanju@123");
+		login.setUserType("admin");
+	   loginServiceImpl.addUserCredentials(login);
 	}
 
 	//----------------------------------------------------------------------------------------->UPDATE USERS CREDITINALS<------------------------------------------------------------------------------------------\\	

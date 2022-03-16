@@ -92,14 +92,7 @@ public class LoginServiceImpl implements LoginService1 {
 		return "password changed sucessfully "+username;
 	}
 	
-	//--------------------------------------------------------------------->UPDATEUSERCREDITINALS  METHOD<---------------------------------------------------------------------------------------\\		
-	public void upateLoginIdPassword(Login login)
-	{
-		int id=login.getlId();
-		Login loginTemp=loginDao.findByLoginId(id);
-		loginDao.save(loginTemp);
-	}
-	
+
 	
 	
 	//---------------------------------------------------------------------->GETLOGINUSERCREDITINALSBy USERNAME PASSWORD  METHOD<---------------------------------------------------------------------------------------\\		
